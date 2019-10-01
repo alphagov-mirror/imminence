@@ -32,3 +32,7 @@ production:
         read:
           mode: :primary
         retry_interval: 120
+
+options:
+  # This is more consistent with ActiveRecord
+  raise_not_found_error: false
