@@ -13,6 +13,5 @@ class DeleteLatestDataSetsForArchivedServices < Mongoid::Migration
           "$gte" => 18  } })
   end
 
-  def self.down
-  end
+  def self.down; end
 end

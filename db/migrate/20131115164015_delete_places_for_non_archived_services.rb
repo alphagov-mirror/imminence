@@ -3,6 +3,5 @@ class DeletePlacesForNonArchivedServices < Mongoid::Migration
     PlaceArchive.delete_all(conditions: { service_slug: { "$nin" => ["number-plate-supplier", "motorcycle-approved-training-bodies"] } })
   end
 
-  def self.down
-  end
+  def self.down; end
 end

@@ -4,6 +4,5 @@ class UpdateIncorrectBusinessSizeFacet < Mongoid::Migration
     BusinessSupport::BusinessSize.where(name: "Between 501 and 1000").update(slug: "between-501-and-1000")
   end
 
-  def self.down
-  end
+  def self.down; end
 end

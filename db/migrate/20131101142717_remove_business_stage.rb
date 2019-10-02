@@ -5,6 +5,5 @@ class RemoveBusinessStage < Mongoid::Migration
     BusinessSupport::Stage.where(slug: "exiting-a-business").delete
   end
 
-  def self.down
-  end
+  def self.down; end
 end

@@ -4,6 +4,5 @@ class RemoveBusinessStageFromSupportSchemes < Mongoid::Migration
     BusinessSupportScheme.all.each {|bss| bss.pull(:stages, "exiting-a-business") }
   end
 
-  def self.down
-  end
+  def self.down; end
 end

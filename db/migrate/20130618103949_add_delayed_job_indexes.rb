@@ -4,6 +4,5 @@ class AddDelayedJobIndexes < Mongoid::Migration
     Delayed::Backend::Mongoid::Job.create_indexes
   end
 
-  def self.down
-  end
+  def self.down; end
 end
