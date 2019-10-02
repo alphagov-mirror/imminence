@@ -141,7 +141,7 @@ Then /^the places should be identical between the datasets in the "(.*?)" servic
   place_1 = data_set_1.places.first
   place_2 = data_set_2.places.first
 
-  expected_identical_attributes = Place.attribute_names - ["_id", "data_set_version"]
+  expected_identical_attributes = Place.attribute_names - %w[_id data_set_version]
   expected_identical_attributes.each do |attribute|
     assert_equal place_1.send(attribute.to_sym), place_2.send(attribute.to_sym)
   end

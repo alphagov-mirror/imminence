@@ -4,12 +4,12 @@ class IntroduceBusinessSizeFacet < Mongoid::Migration
 
     BusinessSupportScheme.all.each do |scheme|
       scheme.add_to_set(
-        business_sizes: [
-          "under-10",
-          "up-to-249",
-          "between-250-and-500",
-          "between-501-and-1000",
-          "over-1000",
+        business_sizes: %w[
+          under-10
+          up-to-249
+          between-250-and-500
+          between-501-and-1000
+          over-1000
         ],
       )
     end
