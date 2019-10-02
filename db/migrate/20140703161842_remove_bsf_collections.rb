@@ -1,5 +1,4 @@
 class RemoveBsfCollections < Mongoid::Migration
-
   COLLECTIONS_TO_REMOVE = %w[business_support_types business_support_support_types
                              business_support_schemes business_support_business_types
                              business_support_sectors business_support_locations
