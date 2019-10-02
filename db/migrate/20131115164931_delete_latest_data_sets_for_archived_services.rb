@@ -4,13 +4,13 @@ class DeleteLatestDataSetsForArchivedServices < Mongoid::Migration
       conditions: {
         :service_slug => "motorcycle-approved-training-bodies",
         :data_set_version => {
-          "$gte" => 114  }})
+          "$gte" => 114  } })
 
     PlaceArchive.delete_all(
       conditions: {
         :service_slug => "number-plate-supplier",
         :data_set_version => {
-          "$gte" => 18  }})
+          "$gte" => 18  } })
   end
 
   def self.down
