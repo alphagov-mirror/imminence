@@ -4,7 +4,7 @@ class RemoveBsfCollections < Mongoid::Migration
     "business_support_schemes", "business_support_business_types",
     "business_support_sectors", "business_support_locations",
     "business_support_purposes", "business_support_business_sizes",
-    "business_support_stages"]
+    "business_support_stages"].freeze
 
   def self.up
     Mongoid::Threaded.sessions.values.each do |session|
