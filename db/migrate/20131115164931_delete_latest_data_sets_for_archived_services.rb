@@ -6,7 +6,8 @@ class DeleteLatestDataSetsForArchivedServices < Mongoid::Migration
         data_set_version: {
           "$gte" => 114  
 } 
-})
+}
+)
 
     PlaceArchive.delete_all(
       conditions: {
@@ -14,7 +15,8 @@ class DeleteLatestDataSetsForArchivedServices < Mongoid::Migration
         data_set_version: {
           "$gte" => 18  
 } 
-})
+}
+)
   end
 
   def self.down; end
