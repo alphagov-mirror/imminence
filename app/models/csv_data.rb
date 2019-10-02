@@ -14,7 +14,7 @@ class CsvData
   validates_presence_of :data
 
   def service
-    @_service ||= Service.where(slug: service_slug).first
+    @service ||= Service.where(slug: service_slug).first
   end
 
   def data_set
