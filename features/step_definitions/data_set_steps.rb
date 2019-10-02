@@ -134,12 +134,12 @@ end
 
 Then /^the places should be identical between the datasets in the "(.*?)" service$/ do |name|
   service = Service.where(name: name).first
-  data_set_1 = service.data_sets.first
-  data_set_2 = service.data_sets.last
-  [data_set_1, data_set_2].each { |data_set| assert_equal 1, data_set.places.count }
+  data_set_one = service.data_sets.first
+  data_set_two = service.data_sets.last
+  [data_set_one, data_set_two].each { |data_set| assert_equal 1, data_set.places.count }
 
-  place_1 = data_set_1.places.first
-  place_2 = data_set_2.places.first
+  place_1 = data_set_one.places.first
+  place_2 = data_set_two.places.first
 
   expected_identical_attributes = Place.attribute_names - %w[_id data_set_version]
   expected_identical_attributes.each do |attribute|
